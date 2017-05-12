@@ -1,0 +1,1038 @@
+2017-05-12 14:47:50.124  INFO 9944 [main] --- o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v2.16 on CBustani with PID 9944 (started by Carlos Bustani in C:\Users\Carlos Bustani\Documents\GitHub\qzr\qzr-web)
+2017-05-12 14:47:50.218  INFO 9944 [main] --- o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6a84bc3f: startup date [Fri May 12 14:47:50 CDT 2017]; root of context hierarchy
+2017-05-12 14:47:51.483  INFO 9944 [main] --- o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2017-05-12 14:47:53.081  INFO 9944 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientInboundChannelExecutor'
+2017-05-12 14:47:53.097  INFO 9944 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientOutboundChannelExecutor'
+2017-05-12 14:47:53.112  INFO 9944 [main] --- o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'messageBrokerSockJsTaskScheduler'
+2017-05-12 14:47:53.426  INFO 9944 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/drools/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-05-12 14:47:53.441  INFO 9944 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'brokerChannelExecutor'
+2017-05-12 14:47:54.410  INFO 9944 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 14:47:54.473  INFO 9944 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto java.lang.String com.sctrcd.qzr.web.controllers.HomeController.index()
+2017-05-12 14:47:54.473  INFO 9944 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/skip],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sctrcd.qzr.web.controllers.HrMaxQuizController.skip(java.lang.String)
+2017-05-12 14:47:54.473  INFO 9944 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.QuestionResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuestion(java.lang.String) throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 14:47:54.473  INFO 9944 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.AnswerResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.answer(java.lang.String,com.sctrcd.qzr.web.resources.AnswerResource) throws com.sctrcd.qzr.web.resources.BadRequestException
+2017-05-12 14:47:54.473  INFO 9944 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.AnswerResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getAnswer(java.lang.String) throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 14:47:54.473  INFO 9944 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/next],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.QuestionResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getNextQuestion() throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 14:47:54.488  INFO 9944 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.sctrcd.qzr.web.resources.QuizResource com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuiz()
+2017-05-12 14:47:54.488  INFO 9944 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<java.util.List<com.sctrcd.qzr.web.resources.QuestionResource>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuestions()
+2017-05-12 14:47:54.488  INFO 9944 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sctrcd.qzr.web.controllers.HrMaxQuizController.retractAnswer(java.lang.String)
+2017-05-12 14:47:54.488  INFO 9944 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/results/hrmax],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.sctrcd.qzr.facts.HrMax com.sctrcd.qzr.web.controllers.HrMaxQuizController.getHrMax() throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 14:47:54.488  INFO 9944 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/answers],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<java.util.List<com.sctrcd.qzr.web.resources.AnswerResource>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getAnswers()
+2017-05-12 14:47:54.488  INFO 9944 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/knowns],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Collection<com.sctrcd.qzr.facts.Known<?>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getKnowns()
+2017-05-12 14:47:54.488  INFO 9944 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-12 14:47:54.488  INFO 9944 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2017-05-12 14:47:54.551  INFO 9944 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 14:47:54.551  INFO 9944 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 14:47:55.410  INFO 9944 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:47:55.426  INFO 9944 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:47:55.426  INFO 9944 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:47:55.426  INFO 9944 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:47:55.426  INFO 9944 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke()
+2017-05-12 14:47:55.426  INFO 9944 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:47:55.441  INFO 9944 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-05-12 14:47:55.441  INFO 9944 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:47:55.441  INFO 9944 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:47:55.441  INFO 9944 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-05-12 14:47:55.441  INFO 9944 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:47:55.441  INFO 9944 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:47:55.473  INFO 9944 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'metricsExecutor'
+2017-05-12 14:47:55.660  INFO 9944 [main] --- o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-05-12 14:47:55.660  INFO 9944 [main] --- o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 5.832 seconds (JVM running for 11.47)
+2017-05-12 14:47:55.691  INFO 9944 [main] --- c.sctrcd.qzr.services.HrMaxQuizService   : Initialising a new quiz session.
+2017-05-12 14:47:55.848 DEBUG 9944 [main] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Ask dateOfBirth
+2017-05-12 14:47:55.879  INFO 9944 [Thread-3] --- o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6a84bc3f: startup date [Fri May 12 14:47:50 CDT 2017]; root of context hierarchy
+2017-05-12 14:47:55.895  INFO 9944 [Thread-3] --- o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2017-05-12 14:47:55.910  INFO 9944 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'metricsExecutor'
+2017-05-12 14:47:55.910  INFO 9944 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'brokerChannelExecutor'
+2017-05-12 14:47:55.910  INFO 9944 [Thread-3] --- o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'messageBrokerSockJsTaskScheduler'
+2017-05-12 14:47:55.926  INFO 9944 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2017-05-12 14:47:55.926  INFO 9944 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientInboundChannelExecutor'
+2017-05-12 14:50:06.370  INFO 2388 [main] --- o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v2.16 on CBustani with PID 2388 (started by Carlos Bustani in C:\Users\Carlos Bustani\Documents\GitHub\qzr\qzr-web)
+2017-05-12 14:50:06.462  INFO 2388 [main] --- o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6a84bc3f: startup date [Fri May 12 14:50:06 CDT 2017]; root of context hierarchy
+2017-05-12 14:50:07.712  INFO 2388 [main] --- o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2017-05-12 14:50:09.246  INFO 2388 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientInboundChannelExecutor'
+2017-05-12 14:50:09.246  INFO 2388 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientOutboundChannelExecutor'
+2017-05-12 14:50:09.277  INFO 2388 [main] --- o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'messageBrokerSockJsTaskScheduler'
+2017-05-12 14:50:09.574  INFO 2388 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/drools/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-05-12 14:50:09.574  INFO 2388 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'brokerChannelExecutor'
+2017-05-12 14:50:10.512  INFO 2388 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 14:50:10.590  INFO 2388 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto java.lang.String com.sctrcd.qzr.web.controllers.HomeController.index()
+2017-05-12 14:50:10.590  INFO 2388 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/skip],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sctrcd.qzr.web.controllers.HrMaxQuizController.skip(java.lang.String)
+2017-05-12 14:50:10.590  INFO 2388 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.QuestionResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuestion(java.lang.String) throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 14:50:10.590  INFO 2388 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.AnswerResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getAnswer(java.lang.String) throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 14:50:10.590  INFO 2388 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.AnswerResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.answer(java.lang.String,com.sctrcd.qzr.web.resources.AnswerResource) throws com.sctrcd.qzr.web.resources.BadRequestException
+2017-05-12 14:50:10.590  INFO 2388 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/next],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.QuestionResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getNextQuestion() throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 14:50:10.590  INFO 2388 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<java.util.List<com.sctrcd.qzr.web.resources.QuestionResource>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuestions()
+2017-05-12 14:50:10.590  INFO 2388 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.sctrcd.qzr.web.resources.QuizResource com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuiz()
+2017-05-12 14:50:10.590  INFO 2388 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/results/hrmax],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.sctrcd.qzr.facts.HrMax com.sctrcd.qzr.web.controllers.HrMaxQuizController.getHrMax() throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 14:50:10.590  INFO 2388 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sctrcd.qzr.web.controllers.HrMaxQuizController.retractAnswer(java.lang.String)
+2017-05-12 14:50:10.590  INFO 2388 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/knowns],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Collection<com.sctrcd.qzr.facts.Known<?>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getKnowns()
+2017-05-12 14:50:10.590  INFO 2388 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/answers],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<java.util.List<com.sctrcd.qzr.web.resources.AnswerResource>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getAnswers()
+2017-05-12 14:50:10.590  INFO 2388 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-12 14:50:10.605  INFO 2388 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2017-05-12 14:50:10.621  INFO 2388 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 14:50:10.621  INFO 2388 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 14:50:11.465  INFO 2388 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:50:11.465  INFO 2388 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:50:11.465  INFO 2388 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:50:11.465  INFO 2388 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:50:11.480  INFO 2388 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke()
+2017-05-12 14:50:11.480  INFO 2388 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:50:11.480  INFO 2388 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-05-12 14:50:11.480  INFO 2388 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:50:11.480  INFO 2388 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:50:11.480  INFO 2388 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-05-12 14:50:11.480  INFO 2388 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:50:11.480  INFO 2388 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:50:11.512  INFO 2388 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'metricsExecutor'
+2017-05-12 14:50:11.621  INFO 2388 [main] --- o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-05-12 14:50:11.621  INFO 2388 [main] --- o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 5.603 seconds (JVM running for 11.103)
+2017-05-12 14:50:11.652  INFO 2388 [main] --- c.sctrcd.qzr.services.HrMaxQuizService   : Initialising a new quiz session.
+2017-05-12 14:50:11.730 DEBUG 2388 [main] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Ask dateOfBirth
+2017-05-12 14:50:11.793  INFO 2388 [Thread-3] --- o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6a84bc3f: startup date [Fri May 12 14:50:06 CDT 2017]; root of context hierarchy
+2017-05-12 14:50:11.793  INFO 2388 [Thread-3] --- o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2017-05-12 14:50:11.793  INFO 2388 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'metricsExecutor'
+2017-05-12 14:50:11.809  INFO 2388 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'brokerChannelExecutor'
+2017-05-12 14:50:11.809  INFO 2388 [Thread-3] --- o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'messageBrokerSockJsTaskScheduler'
+2017-05-12 14:50:11.809  INFO 2388 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2017-05-12 14:50:11.809  INFO 2388 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientInboundChannelExecutor'
+2017-05-12 14:59:37.760  INFO 11716 [main] --- o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v2.16 on CBustani with PID 11716 (started by Carlos Bustani in C:\Users\Carlos Bustani\Documents\GitHub\qzr\qzr-web)
+2017-05-12 14:59:37.885  INFO 11716 [main] --- o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6a84bc3f: startup date [Fri May 12 14:59:37 CDT 2017]; root of context hierarchy
+2017-05-12 14:59:39.037  INFO 11716 [main] --- o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2017-05-12 14:59:40.292  INFO 11716 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientInboundChannelExecutor'
+2017-05-12 14:59:40.307  INFO 11716 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientOutboundChannelExecutor'
+2017-05-12 14:59:40.323  INFO 11716 [main] --- o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'messageBrokerSockJsTaskScheduler'
+2017-05-12 14:59:40.588  INFO 11716 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/drools/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-05-12 14:59:40.588  INFO 11716 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'brokerChannelExecutor'
+2017-05-12 14:59:41.435  INFO 11716 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 14:59:41.482  INFO 11716 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto java.lang.String com.sctrcd.qzr.web.controllers.HomeController.index()
+2017-05-12 14:59:41.482  INFO 11716 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/skip],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sctrcd.qzr.web.controllers.HrMaxQuizController.skip(java.lang.String)
+2017-05-12 14:59:41.482  INFO 11716 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.QuestionResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuestion(java.lang.String) throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 14:59:41.482  INFO 11716 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.AnswerResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.answer(java.lang.String,com.sctrcd.qzr.web.resources.AnswerResource) throws com.sctrcd.qzr.web.resources.BadRequestException
+2017-05-12 14:59:41.482  INFO 11716 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.AnswerResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getAnswer(java.lang.String) throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 14:59:41.482  INFO 11716 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/next],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.QuestionResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getNextQuestion() throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 14:59:41.482  INFO 11716 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/knowns],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Collection<com.sctrcd.qzr.facts.Known<?>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getKnowns()
+2017-05-12 14:59:41.482  INFO 11716 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sctrcd.qzr.web.controllers.HrMaxQuizController.retractAnswer(java.lang.String)
+2017-05-12 14:59:41.482  INFO 11716 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/answers],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<java.util.List<com.sctrcd.qzr.web.resources.AnswerResource>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getAnswers()
+2017-05-12 14:59:41.482  INFO 11716 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/results/hrmax],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.sctrcd.qzr.facts.HrMax com.sctrcd.qzr.web.controllers.HrMaxQuizController.getHrMax() throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 14:59:41.497  INFO 11716 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.sctrcd.qzr.web.resources.QuizResource com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuiz()
+2017-05-12 14:59:41.497  INFO 11716 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<java.util.List<com.sctrcd.qzr.web.resources.QuestionResource>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuestions()
+2017-05-12 14:59:41.497  INFO 11716 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-12 14:59:41.497  INFO 11716 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2017-05-12 14:59:41.528  INFO 11716 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 14:59:41.528  INFO 11716 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 14:59:42.388  INFO 11716 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-05-12 14:59:42.388  INFO 11716 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:59:42.388  INFO 11716 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:59:42.388  INFO 11716 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:59:42.388  INFO 11716 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:59:42.388  INFO 11716 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-05-12 14:59:42.388  INFO 11716 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:59:42.388  INFO 11716 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:59:42.388  INFO 11716 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:59:42.403  INFO 11716 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:59:42.403  INFO 11716 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke()
+2017-05-12 14:59:42.403  INFO 11716 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 14:59:42.419  INFO 11716 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'metricsExecutor'
+2017-05-12 14:59:42.560  INFO 11716 [main] --- o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-05-12 14:59:42.560  INFO 11716 [main] --- o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 5.097 seconds (JVM running for 9.717)
+2017-05-12 14:59:42.607  INFO 11716 [main] --- c.sctrcd.qzr.services.HrMaxQuizService   : Initialising a new quiz session.
+2017-05-12 14:59:42.685 DEBUG 11716 [main] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Ask dateOfBirth
+2017-05-12 14:59:42.716  INFO 11716 [Thread-3] --- o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6a84bc3f: startup date [Fri May 12 14:59:37 CDT 2017]; root of context hierarchy
+2017-05-12 14:59:42.732  INFO 11716 [Thread-3] --- o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2017-05-12 14:59:42.747  INFO 11716 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'metricsExecutor'
+2017-05-12 14:59:42.763  INFO 11716 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'brokerChannelExecutor'
+2017-05-12 14:59:42.763  INFO 11716 [Thread-3] --- o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'messageBrokerSockJsTaskScheduler'
+2017-05-12 14:59:42.763  INFO 11716 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2017-05-12 14:59:42.763  INFO 11716 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientInboundChannelExecutor'
+2017-05-12 15:02:14.966  INFO 6164 [main] --- o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v2.16 on CBustani with PID 6164 (started by Carlos Bustani in C:\Users\Carlos Bustani\Documents\GitHub\qzr\qzr-web)
+2017-05-12 15:02:15.076  INFO 6164 [main] --- o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6a84bc3f: startup date [Fri May 12 15:02:15 CDT 2017]; root of context hierarchy
+2017-05-12 15:02:16.216  INFO 6164 [main] --- o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2017-05-12 15:02:17.576  INFO 6164 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientInboundChannelExecutor'
+2017-05-12 15:02:17.592  INFO 6164 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientOutboundChannelExecutor'
+2017-05-12 15:02:17.607  INFO 6164 [main] --- o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'messageBrokerSockJsTaskScheduler'
+2017-05-12 15:02:17.873  INFO 6164 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/drools/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-05-12 15:02:17.873  INFO 6164 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'brokerChannelExecutor'
+2017-05-12 15:02:18.732  INFO 6164 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 15:02:18.795  INFO 6164 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto java.lang.String com.sctrcd.qzr.web.controllers.HomeController.index()
+2017-05-12 15:02:18.795  INFO 6164 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/skip],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sctrcd.qzr.web.controllers.HrMaxQuizController.skip(java.lang.String)
+2017-05-12 15:02:18.795  INFO 6164 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/next],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.QuestionResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getNextQuestion() throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:02:18.795  INFO 6164 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.AnswerResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.answer(java.lang.String,com.sctrcd.qzr.web.resources.AnswerResource) throws com.sctrcd.qzr.web.resources.BadRequestException
+2017-05-12 15:02:18.795  INFO 6164 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.AnswerResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getAnswer(java.lang.String) throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:02:18.795  INFO 6164 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.QuestionResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuestion(java.lang.String) throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:02:18.795  INFO 6164 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/answers],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<java.util.List<com.sctrcd.qzr.web.resources.AnswerResource>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getAnswers()
+2017-05-12 15:02:18.810  INFO 6164 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sctrcd.qzr.web.controllers.HrMaxQuizController.retractAnswer(java.lang.String)
+2017-05-12 15:02:18.810  INFO 6164 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/results/hrmax],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.sctrcd.qzr.facts.HrMax com.sctrcd.qzr.web.controllers.HrMaxQuizController.getHrMax() throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:02:18.810  INFO 6164 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/knowns],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Collection<com.sctrcd.qzr.facts.Known<?>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getKnowns()
+2017-05-12 15:02:18.810  INFO 6164 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.sctrcd.qzr.web.resources.QuizResource com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuiz()
+2017-05-12 15:02:18.810  INFO 6164 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<java.util.List<com.sctrcd.qzr.web.resources.QuestionResource>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuestions()
+2017-05-12 15:02:18.842  INFO 6164 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-12 15:02:18.857  INFO 6164 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2017-05-12 15:02:18.888  INFO 6164 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 15:02:18.888  INFO 6164 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 15:02:19.689  INFO 6164 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:02:19.689  INFO 6164 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:02:19.689  INFO 6164 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:02:19.689  INFO 6164 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:02:19.689  INFO 6164 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke()
+2017-05-12 15:02:19.689  INFO 6164 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:02:19.704  INFO 6164 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-05-12 15:02:19.704  INFO 6164 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:02:19.704  INFO 6164 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:02:19.704  INFO 6164 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-05-12 15:02:19.704  INFO 6164 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:02:19.720  INFO 6164 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:02:19.736  INFO 6164 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'metricsExecutor'
+2017-05-12 15:02:19.892  INFO 6164 [main] --- o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-05-12 15:02:19.908  INFO 6164 [main] --- o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 5.254 seconds (JVM running for 9.431)
+2017-05-12 15:02:19.939  INFO 6164 [main] --- c.sctrcd.qzr.services.HrMaxQuizService   : Initialising a new quiz session.
+2017-05-12 15:02:20.017 DEBUG 6164 [main] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Ask dateOfBirth
+2017-05-12 15:02:20.064  INFO 6164 [Thread-3] --- o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6a84bc3f: startup date [Fri May 12 15:02:15 CDT 2017]; root of context hierarchy
+2017-05-12 15:02:20.064  INFO 6164 [Thread-3] --- o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2017-05-12 15:02:20.079  INFO 6164 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'metricsExecutor'
+2017-05-12 15:02:20.095  INFO 6164 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'brokerChannelExecutor'
+2017-05-12 15:02:20.095  INFO 6164 [Thread-3] --- o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'messageBrokerSockJsTaskScheduler'
+2017-05-12 15:02:20.095  INFO 6164 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2017-05-12 15:02:20.095  INFO 6164 [Thread-3] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientInboundChannelExecutor'
+2017-05-12 15:03:00.885  INFO 2564 [main] --- com.sctrcd.qzr.Qzr                       : Starting Qzr on CBustani with PID 2564 (C:\Users\Carlos Bustani\Documents\GitHub\qzr\qzr-web\target\qzr-web-1.0.0-SNAPSHOT.jar started by Carlos Bustani in C:\Users\Carlos Bustani\Documents\GitHub\qzr\qzr-web)
+2017-05-12 15:03:00.901 DEBUG 2564 [main] --- com.sctrcd.qzr.Qzr                       : Running with Spring Boot v1.1.9.RELEASE, Spring v4.0.8.RELEASE
+2017-05-12 15:03:00.964  INFO 2564 [main] --- ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b6644: startup date [Fri May 12 15:03:00 CDT 2017]; root of context hierarchy
+2017-05-12 15:03:02.341  INFO 2564 [main] --- o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2017-05-12 15:03:03.982  INFO 2564 [main] --- .t.TomcatEmbeddedServletContainerFactory : Server initialized with port: 40080
+2017-05-12 15:03:04.201  INFO 2564 [main] --- o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-12 15:03:04.201  INFO 2564 [main] --- org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/7.0.56
+2017-05-12 15:03:04.420  INFO 2564 [localhost-startStop-1] --- o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-12 15:03:04.420  INFO 2564 [localhost-startStop-1] --- o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3472 ms
+2017-05-12 15:03:04.764  INFO 2564 [localhost-startStop-1] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'metricsExecutor'
+2017-05-12 15:03:05.670  INFO 2564 [localhost-startStop-1] --- o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-12 15:03:05.686  INFO 2564 [localhost-startStop-1] --- o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2017-05-12 15:03:05.686  INFO 2564 [localhost-startStop-1] --- o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-12 15:03:05.686  INFO 2564 [localhost-startStop-1] --- o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-05-12 15:03:05.686  INFO 2564 [localhost-startStop-1] --- o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-05-12 15:03:05.951  INFO 2564 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientInboundChannelExecutor'
+2017-05-12 15:03:05.951  INFO 2564 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientOutboundChannelExecutor'
+2017-05-12 15:03:05.983  INFO 2564 [main] --- o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'messageBrokerSockJsTaskScheduler'
+2017-05-12 15:03:06.061  INFO 2564 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/drools/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-05-12 15:03:06.076  INFO 2564 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'brokerChannelExecutor'
+2017-05-12 15:03:06.561  INFO 2564 [main] --- o.d.c.k.b.impl.ClasspathKieProject       : Found kmodule: jar:file:/C:/Users/Carlos%20Bustani/Documents/GitHub/qzr/qzr-web/target/qzr-web-1.0.0-SNAPSHOT.jar!/META-INF/kmodule.xml
+2017-05-12 15:03:10.955  INFO 2564 [main] --- o.d.c.k.builder.impl.KieRepositoryImpl   : KieModule was added:ZipKieModule[ ReleaseId=com.sctrcd:qzr-web:1.0.0-SNAPSHOTfile=C:\Users\Carlos Bustani\Documents\GitHub\qzr\qzr-web\target\qzr-web-1.0.0-SNAPSHOT.jar]
+2017-05-12 15:03:11.049  INFO 2564 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 15:03:11.127  INFO 2564 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto java.lang.String com.sctrcd.qzr.web.controllers.HomeController.index()
+2017-05-12 15:03:11.127  INFO 2564 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/skip],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sctrcd.qzr.web.controllers.HrMaxQuizController.skip(java.lang.String)
+2017-05-12 15:03:11.142  INFO 2564 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/next],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.QuestionResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getNextQuestion() throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:03:11.142  INFO 2564 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<java.util.List<com.sctrcd.qzr.web.resources.QuestionResource>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuestions()
+2017-05-12 15:03:11.158  INFO 2564 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.QuestionResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuestion(java.lang.String) throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:03:11.174  INFO 2564 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/knowns],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Collection<com.sctrcd.qzr.facts.Known<?>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getKnowns()
+2017-05-12 15:03:11.174  INFO 2564 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/answers],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<java.util.List<com.sctrcd.qzr.web.resources.AnswerResource>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getAnswers()
+2017-05-12 15:03:11.189  INFO 2564 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sctrcd.qzr.web.controllers.HrMaxQuizController.retractAnswer(java.lang.String)
+2017-05-12 15:03:11.189  INFO 2564 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.AnswerResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getAnswer(java.lang.String) throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:03:11.205  INFO 2564 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.AnswerResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.answer(java.lang.String,com.sctrcd.qzr.web.resources.AnswerResource) throws com.sctrcd.qzr.web.resources.BadRequestException
+2017-05-12 15:03:11.205  INFO 2564 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/results/hrmax],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.sctrcd.qzr.facts.HrMax com.sctrcd.qzr.web.controllers.HrMaxQuizController.getHrMax() throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:03:11.221  INFO 2564 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.sctrcd.qzr.web.resources.QuizResource com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuiz()
+2017-05-12 15:03:11.221  INFO 2564 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-12 15:03:11.236  INFO 2564 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2017-05-12 15:03:11.267  INFO 2564 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 15:03:11.267  INFO 2564 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 15:03:12.033  INFO 2564 [main] --- o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-12 15:03:12.080  INFO 2564 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Registering beans for JMX exposure on startup
+2017-05-12 15:03:12.174  INFO 2564 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:03:12.174  INFO 2564 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:03:12.174  INFO 2564 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:03:12.190  INFO 2564 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:03:12.190  INFO 2564 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-05-12 15:03:12.205  INFO 2564 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:03:12.205  INFO 2564 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke()
+2017-05-12 15:03:12.221  INFO 2564 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:03:12.221  INFO 2564 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:03:12.221  INFO 2564 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-05-12 15:03:12.236  INFO 2564 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:03:12.236  INFO 2564 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:03:12.283  INFO 2564 [main] --- o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-05-12 15:03:12.299  INFO 2564 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+2017-05-12 15:03:12.346  INFO 2564 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+2017-05-12 15:03:12.346  INFO 2564 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+2017-05-12 15:03:12.361  INFO 2564 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+2017-05-12 15:03:12.361  INFO 2564 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+2017-05-12 15:03:12.377  INFO 2564 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+2017-05-12 15:03:12.377  INFO 2564 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+2017-05-12 15:03:12.393  INFO 2564 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+2017-05-12 15:03:12.393  INFO 2564 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'autoConfigurationAuditEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationAuditEndpoint]
+2017-05-12 15:03:12.408  INFO 2564 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'shutdownEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=shutdownEndpoint]
+2017-05-12 15:03:12.424  INFO 2564 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+2017-05-12 15:03:12.440  INFO 2564 [main] --- o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-05-12 15:03:12.549  INFO 2564 [main] --- s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 40080/http
+2017-05-12 15:03:12.549  INFO 2564 [main] --- com.sctrcd.qzr.Qzr                       : Started Qzr in 12.148 seconds (JVM running for 13.275)
+2017-05-12 15:03:12.549  INFO 2564 [main] --- com.sctrcd.qzr.Qzr                       : 
+
+    Active profiles:
+        scratch
+        drools
+
+    Application beans:
+        answerResourceAssembler
+        applicationContextIdFilter
+        auditEventRepository
+        auditListener
+        autoConfigurationAuditEndpoint
+        basicErrorController
+        beanNameHandlerMapping
+        beanNameViewResolver
+        beansEndpoint
+        brokerChannel
+        brokerChannelExecutor
+        brokerMessageConverter
+        brokerMessagingTemplate
+        clientInboundChannel
+        clientInboundChannelExecutor
+        clientOutboundChannel
+        clientOutboundChannelExecutor
+        configurationPropertiesReportEndpoint
+        counterService
+        defaultServletHandlerMapping
+        defaultTemplateResolver
+        defaultViewResolver
+        dispatcherServlet
+        dispatcherServletRegistration
+        dumpEndpoint
+        embeddedServletContainerCustomizerBeanPostProcessor
+        endpointHandlerMapping
+        endpointMBeanExporter
+        endpoints.health.CONFIGURATION_PROPERTIES
+        endpoints.jmx.CONFIGURATION_PROPERTIES
+        environmentEndpoint
+        environmentMvcEndpoint
+        error
+        errorAttributes
+        faviconHandlerMapping
+        faviconRequestHandler
+        gaugeService
+        handlerExceptionResolver
+        healthAggregator
+        healthEndpoint
+        healthMvcEndpoint
+        hiddenHttpMethodFilter
+        homeController
+        hrMaxQuizController
+        hrMaxQuizService
+        http.mappers.CONFIGURATION_PROPERTIES
+        httpRequestHandlerAdapter
+        infoEndpoint
+        jacksonJodaModule
+        kieContainer
+        layoutDialect
+        managementServerProperties
+        mappingJackson2HttpMessageConverter
+        mbeanExporter
+        mbeanServer
+        messageBrokerSockJsTaskScheduler
+        messageConverters
+        metricFilter
+        metricRepository
+        metricsChannel
+        metricsEndpoint
+        metricsExecutor
+        metricsMvcEndpoint
+        multipart.CONFIGURATION_PROPERTIES
+        multipartConfigElement
+        multipartResolver
+        mvcContentNegotiationManager
+        mvcConversionService
+        mvcEndpoints
+        mvcUriComponentsContributor
+        mvcValidator
+        objectMapper
+        objectNamingStrategy
+        org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration$AuditEventRepositoryConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$InfoPropertiesConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$RequestMappingEndpointConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ApplicationContextFilterConfiguration
+        org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration$MetricRepositoryConfiguration
+        org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration$MetricsChannelConfiguration
+        org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration
+        org.springframework.boot.autoconfigure.AutoConfigurationPackages
+        org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration
+        org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
+        org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperAutoConfiguration
+        org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JodaModuleAutoConfiguration
+        org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
+        org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$Empty
+        org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration
+        org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration
+        org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafDefaultConfiguration
+        org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafViewResolverConfiguration
+        org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebLayoutConfiguration
+        org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration
+        org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletConfiguration
+        org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration
+        org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat
+        org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration
+        org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration
+        org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration
+        org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration$ObjectMappers
+        org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration
+        org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration
+        org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
+        org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter
+        org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$FaviconConfiguration
+        org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration
+        org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor
+        org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.store
+        org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor
+        org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor
+        org.springframework.context.annotation.MBeanExportConfiguration
+        org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+        org.springframework.context.annotation.internalCommonAnnotationProcessor
+        org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+        org.springframework.context.annotation.internalRequiredAnnotationProcessor
+        org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration
+        org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration
+        primaryMetricWriter
+        propertySourcesPlaceholderConfigurer
+        questionResourceAssembler
+        qzr
+        requestContextListener
+        requestMappingEndpoint
+        requestMappingHandlerAdapter
+        requestMappingHandlerMapping
+        resourceHandlerMapping
+        scopedTarget.hrMaxQuizService
+        serializationConfig
+        serverProperties
+        shutdownEndpoint
+        simpAnnotationMethodMessageHandler
+        simpleBrokerMessageHandler
+        simpleControllerHandlerAdapter
+        spring.mvc.CONFIGURATION_PROPERTIES
+        spring.resources.CONFIGURATION_PROPERTIES
+        statusHealthIndicator
+        stompBrokerRelayMessageHandler
+        stompWebSocketHandlerMapping
+        subProtocolWebSocketHandler
+        templateEngine
+        thymeleafResourceResolver
+        thymeleafViewResolver
+        tomcatEmbeddedServletContainerFactory
+        traceEndpoint
+        traceRepository
+        userDestinationMessageHandler
+        userDestinationResolver
+        userSessionRegistry
+        viewControllerHandlerMapping
+        viewResolver
+        webRequestLoggingFilter
+        webSocketConfig
+        websocketContainerCustomizer
+
+2017-05-12 15:04:59.688  INFO 2564 [http-nio-40080-exec-1] --- o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-12 15:04:59.691  INFO 2564 [http-nio-40080-exec-1] --- o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-12 15:04:59.741  INFO 2564 [http-nio-40080-exec-1] --- o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+2017-05-12 15:05:00.597 DEBUG 2564 [http-nio-40080-exec-3] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:05:00.625  INFO 2564 [http-nio-40080-exec-3] --- c.sctrcd.qzr.services.HrMaxQuizService   : Initialising a new quiz session.
+2017-05-12 15:05:03.190 DEBUG 2564 [http-nio-40080-exec-3] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Ask dateOfBirth
+2017-05-12 15:05:03.250 DEBUG 2564 [http-nio-40080-exec-3] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }]
+2017-05-12 15:05:17.589 DEBUG 2564 [http-nio-40080-exec-9] --- c.s.q.w.controllers.HrMaxQuizController  : Answer to question [dateOfBirth]: 1994-10-10
+2017-05-12 15:05:17.666 DEBUG 2564 [http-nio-40080-exec-9] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Bind question to answer
+2017-05-12 15:05:17.697 DEBUG 2564 [http-nio-40080-exec-9] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Learn date of birth
+2017-05-12 15:05:17.713 DEBUG 2564 [http-nio-40080-exec-9] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Ask gender
+2017-05-12 15:05:17.713 DEBUG 2564 [http-nio-40080-exec-9] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Calculate age
+2017-05-12 15:05:17.838 DEBUG 2564 [http-nio-40080-exec-9] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Calculate best guess max HR
+2017-05-12 15:05:17.838 DEBUG 2564 [http-nio-40080-exec-9] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Learn HR max
+2017-05-12 15:05:17.860 DEBUG 2564 [http-nio-40080-exec-10] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:05:17.873 DEBUG 2564 [http-nio-40080-exec-10] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }, Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }]
+2017-05-12 15:05:17.927 DEBUG 2564 [http-nio-40080-exec-5] --- c.s.q.w.controllers.HrMaxQuizController  : Knowns: [Known: { key="age", value="23" }, Known: { key="hrMax", value="197" }, Known: { key="dateOfBirth", value="1994-10-10" }]
+2017-05-12 15:05:37.338 DEBUG 2564 [http-nio-40080-exec-9] --- c.s.q.w.controllers.HrMaxQuizController  : Answer to question [gender]: M
+2017-05-12 15:05:37.344 DEBUG 2564 [http-nio-40080-exec-9] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Bind question to answer
+2017-05-12 15:05:37.358 DEBUG 2564 [http-nio-40080-exec-9] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Learn gender
+2017-05-12 15:05:37.379 DEBUG 2564 [http-nio-40080-exec-9] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Is male
+2017-05-12 15:05:37.386 DEBUG 2564 [http-nio-40080-exec-9] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Calculate male-adjusted max HR
+2017-05-12 15:05:37.386 DEBUG 2564 [http-nio-40080-exec-9] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Learn HR max
+2017-05-12 15:05:37.404 DEBUG 2564 [http-nio-40080-exec-10] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:05:37.419 DEBUG 2564 [http-nio-40080-exec-10] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }, Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }]
+2017-05-12 15:05:37.460 DEBUG 2564 [http-nio-40080-exec-5] --- c.s.q.w.controllers.HrMaxQuizController  : Knowns: [Known: { key="age", value="23" }, Known: { key="hrMax", value="195" }, Known: { key="dateOfBirth", value="1994-10-10" }, Known: { key="gender", value="M" }]
+2017-05-12 15:06:57.283 DEBUG 2564 [http-nio-40080-exec-7] --- c.s.q.w.controllers.HrMaxQuizController  : Retracting answer to question [dateOfBirth]
+2017-05-12 15:06:57.294 DEBUG 2564 [http-nio-40080-exec-7] --- com.sctrcd.beans.BeanMatcher             : {question=Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }, class=class com.sctrcd.qzr.facts.Answer, value=M, when=2017-05-12T20:05:37.341Z, key=gender}
+2017-05-12 15:06:57.303 DEBUG 2564 [http-nio-40080-exec-7] --- com.sctrcd.beans.BeanMatcher             : {question=Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }, class=class com.sctrcd.qzr.facts.Answer, value=1994-10-10, when=2017-05-12T20:05:17.610Z, key=dateOfBirth}
+2017-05-12 15:06:57.317 DEBUG 2564 [http-nio-40080-exec-7] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Ask dateOfBirth
+2017-05-12 15:06:57.331 DEBUG 2564 [http-nio-40080-exec-6] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:06:57.344 DEBUG 2564 [http-nio-40080-exec-6] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }, Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }]
+2017-05-12 15:07:01.137 DEBUG 2564 [http-nio-40080-exec-8] --- c.s.q.w.controllers.HrMaxQuizController  : Skipping question [dateOfBirth].
+2017-05-12 15:07:01.144 DEBUG 2564 [http-nio-40080-exec-8] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Bind question to answer
+2017-05-12 15:07:01.153 DEBUG 2564 [http-nio-40080-exec-8] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Learn date of birth
+2017-05-12 15:07:01.160 DEBUG 2564 [http-nio-40080-exec-8] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Unbind answer from question
+2017-05-12 15:07:01.173 DEBUG 2564 [http-nio-40080-exec-4] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:07:01.186 DEBUG 2564 [http-nio-40080-exec-4] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }, Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }]
+2017-05-12 15:07:15.067 DEBUG 2564 [http-nio-40080-exec-10] --- c.s.q.w.controllers.HrMaxQuizController  : Answer to question [dateOfBirth]: 2015-01-01
+2017-05-12 15:07:15.073 DEBUG 2564 [http-nio-40080-exec-10] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Bind question to answer
+2017-05-12 15:07:15.080 DEBUG 2564 [http-nio-40080-exec-10] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Learn date of birth
+2017-05-12 15:07:15.085 DEBUG 2564 [http-nio-40080-exec-10] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Calculate age
+2017-05-12 15:07:15.090 DEBUG 2564 [http-nio-40080-exec-10] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Calculate male-adjusted max HR
+2017-05-12 15:07:15.097 DEBUG 2564 [http-nio-40080-exec-10] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Learn HR max
+2017-05-12 15:07:15.108 DEBUG 2564 [http-nio-40080-exec-1] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:07:15.129 DEBUG 2564 [http-nio-40080-exec-1] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }, Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }]
+2017-05-12 15:07:15.167 DEBUG 2564 [http-nio-40080-exec-3] --- c.s.q.w.controllers.HrMaxQuizController  : Knowns: [Known: { key="hrMax", value="212" }, Known: { key="dateOfBirth", value="2015-01-01" }, Known: { key="gender", value="M" }, Known: { key="age", value="2" }]
+2017-05-12 15:07:28.016 DEBUG 2564 [http-nio-40080-exec-3] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:07:28.035 DEBUG 2564 [http-nio-40080-exec-3] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }, Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }]
+2017-05-12 15:07:28.080 DEBUG 2564 [http-nio-40080-exec-7] --- c.s.q.w.controllers.HrMaxQuizController  : Knowns: [Known: { key="hrMax", value="212" }, Known: { key="dateOfBirth", value="2015-01-01" }, Known: { key="gender", value="M" }, Known: { key="age", value="2" }]
+2017-05-12 15:07:51.695 DEBUG 2564 [http-nio-40080-exec-8] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:07:51.711 DEBUG 2564 [http-nio-40080-exec-8] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }, Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }]
+2017-05-12 15:07:51.755 DEBUG 2564 [http-nio-40080-exec-2] --- c.s.q.w.controllers.HrMaxQuizController  : Knowns: [Known: { key="hrMax", value="212" }, Known: { key="dateOfBirth", value="2015-01-01" }, Known: { key="gender", value="M" }, Known: { key="age", value="2" }]
+2017-05-12 15:07:54.329 DEBUG 2564 [http-nio-40080-exec-7] --- c.s.q.w.controllers.HrMaxQuizController  : Retracting answer to question [dateOfBirth]
+2017-05-12 15:07:54.333 DEBUG 2564 [http-nio-40080-exec-7] --- com.sctrcd.beans.BeanMatcher             : {question=Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }, class=class com.sctrcd.qzr.facts.Answer, value=M, when=2017-05-12T20:05:37.341Z, key=gender}
+2017-05-12 15:07:54.341 DEBUG 2564 [http-nio-40080-exec-7] --- com.sctrcd.beans.BeanMatcher             : {question=Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }, class=class com.sctrcd.qzr.facts.Answer, value=2015-01-01, when=2017-05-12T20:07:15.070Z, key=dateOfBirth}
+2017-05-12 15:07:54.353 DEBUG 2564 [http-nio-40080-exec-7] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Ask dateOfBirth
+2017-05-12 15:07:54.369 DEBUG 2564 [http-nio-40080-exec-1] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:07:54.381 DEBUG 2564 [http-nio-40080-exec-1] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }, Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }]
+2017-05-12 15:07:55.355 DEBUG 2564 [http-nio-40080-exec-10] --- c.s.q.w.controllers.HrMaxQuizController  : Retracting answer to question [gender]
+2017-05-12 15:07:55.359 DEBUG 2564 [http-nio-40080-exec-10] --- com.sctrcd.beans.BeanMatcher             : {question=Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }, class=class com.sctrcd.qzr.facts.Answer, value=M, when=2017-05-12T20:05:37.341Z, key=gender}
+2017-05-12 15:07:55.379 DEBUG 2564 [http-nio-40080-exec-5] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:07:55.387 DEBUG 2564 [http-nio-40080-exec-5] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }]
+2017-05-12 15:08:03.008 DEBUG 2564 [http-nio-40080-exec-4] --- c.s.q.w.controllers.HrMaxQuizController  : Answer to question [dateOfBirth]: 1994-01-01
+2017-05-12 15:08:03.016 DEBUG 2564 [http-nio-40080-exec-4] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Bind question to answer
+2017-05-12 15:08:03.020 DEBUG 2564 [http-nio-40080-exec-4] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Learn date of birth
+2017-05-12 15:08:03.028 DEBUG 2564 [http-nio-40080-exec-4] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Ask gender
+2017-05-12 15:08:03.032 DEBUG 2564 [http-nio-40080-exec-4] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Calculate age
+2017-05-12 15:08:03.040 DEBUG 2564 [http-nio-40080-exec-4] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Calculate best guess max HR
+2017-05-12 15:08:03.044 DEBUG 2564 [http-nio-40080-exec-4] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Learn HR max
+2017-05-12 15:08:03.068 DEBUG 2564 [http-nio-40080-exec-8] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:08:03.084 DEBUG 2564 [http-nio-40080-exec-8] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }, Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }]
+2017-05-12 15:08:03.128 DEBUG 2564 [http-nio-40080-exec-2] --- c.s.q.w.controllers.HrMaxQuizController  : Knowns: [Known: { key="dateOfBirth", value="1994-01-01" }, Known: { key="hrMax", value="197" }, Known: { key="age", value="23" }]
+2017-05-12 15:08:09.643 DEBUG 2564 [http-nio-40080-exec-7] --- c.s.q.w.controllers.HrMaxQuizController  : Answer to question [gender]: M
+2017-05-12 15:08:09.647 DEBUG 2564 [http-nio-40080-exec-7] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Bind question to answer
+2017-05-12 15:08:09.655 DEBUG 2564 [http-nio-40080-exec-7] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Learn gender
+2017-05-12 15:08:09.659 DEBUG 2564 [http-nio-40080-exec-7] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Is male
+2017-05-12 15:08:09.663 DEBUG 2564 [http-nio-40080-exec-7] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Calculate male-adjusted max HR
+2017-05-12 15:08:09.671 DEBUG 2564 [http-nio-40080-exec-7] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Learn HR max
+2017-05-12 15:08:09.683 DEBUG 2564 [http-nio-40080-exec-1] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:08:09.695 DEBUG 2564 [http-nio-40080-exec-1] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }, Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }]
+2017-05-12 15:08:09.735 DEBUG 2564 [http-nio-40080-exec-10] --- c.s.q.w.controllers.HrMaxQuizController  : Knowns: [Known: { key="dateOfBirth", value="1994-01-01" }, Known: { key="gender", value="M" }, Known: { key="hrMax", value="195" }, Known: { key="age", value="23" }]
+2017-05-12 15:08:21.484 DEBUG 2564 [http-nio-40080-exec-6] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:08:21.504 DEBUG 2564 [http-nio-40080-exec-6] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }, Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }]
+2017-05-12 15:08:21.547 DEBUG 2564 [http-nio-40080-exec-10] --- c.s.q.w.controllers.HrMaxQuizController  : Knowns: [Known: { key="dateOfBirth", value="1994-01-01" }, Known: { key="gender", value="M" }, Known: { key="hrMax", value="195" }, Known: { key="age", value="23" }]
+2017-05-12 15:08:37.172  INFO 2564 [Thread-4] --- ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b6644: startup date [Fri May 12 15:03:00 CDT 2017]; root of context hierarchy
+2017-05-12 15:08:37.188  INFO 2564 [Thread-4] --- o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2017-05-12 15:08:37.194  INFO 2564 [Thread-4] --- o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2017-05-12 15:08:37.196  INFO 2564 [Thread-4] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Unregistering JMX-exposed beans on shutdown
+2017-05-12 15:08:37.196  INFO 2564 [Thread-4] --- o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-05-12 15:08:37.211  INFO 2564 [Thread-4] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'brokerChannelExecutor'
+2017-05-12 15:08:37.211  INFO 2564 [Thread-4] --- o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'messageBrokerSockJsTaskScheduler'
+2017-05-12 15:08:37.211  INFO 2564 [Thread-4] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2017-05-12 15:08:37.211  INFO 2564 [Thread-4] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientInboundChannelExecutor'
+2017-05-12 15:08:37.227  INFO 2564 [Thread-4] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'metricsExecutor'
+2017-05-12 15:08:48.619  INFO 8680 [main] --- com.sctrcd.qzr.Qzr                       : Starting Qzr on CBustani with PID 8680 (C:\Users\Carlos Bustani\Documents\GitHub\qzr\qzr-web\target\qzr-web-1.0.0-SNAPSHOT.jar started by Carlos Bustani in C:\Users\Carlos Bustani\Documents\GitHub\qzr\qzr-web)
+2017-05-12 15:08:48.643 DEBUG 8680 [main] --- com.sctrcd.qzr.Qzr                       : Running with Spring Boot v1.1.9.RELEASE, Spring v4.0.8.RELEASE
+2017-05-12 15:08:48.744  INFO 8680 [main] --- ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1583b: startup date [Fri May 12 15:08:48 CDT 2017]; root of context hierarchy
+2017-05-12 15:08:50.887  INFO 8680 [main] --- o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2017-05-12 15:08:52.950  INFO 8680 [main] --- .t.TomcatEmbeddedServletContainerFactory : Server initialized with port: 40080
+2017-05-12 15:08:53.216  INFO 8680 [main] --- o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-12 15:08:53.216  INFO 8680 [main] --- org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/7.0.56
+2017-05-12 15:08:53.446  INFO 8680 [localhost-startStop-1] --- o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-12 15:08:53.450  INFO 8680 [localhost-startStop-1] --- o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4710 ms
+2017-05-12 15:08:53.899  INFO 8680 [localhost-startStop-1] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'metricsExecutor'
+2017-05-12 15:08:55.049  INFO 8680 [localhost-startStop-1] --- o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-12 15:08:55.049  INFO 8680 [localhost-startStop-1] --- o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2017-05-12 15:08:55.049  INFO 8680 [localhost-startStop-1] --- o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-12 15:08:55.064  INFO 8680 [localhost-startStop-1] --- o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-05-12 15:08:55.064  INFO 8680 [localhost-startStop-1] --- o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-05-12 15:08:55.502  INFO 8680 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientInboundChannelExecutor'
+2017-05-12 15:08:55.502  INFO 8680 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientOutboundChannelExecutor'
+2017-05-12 15:08:55.534  INFO 8680 [main] --- o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'messageBrokerSockJsTaskScheduler'
+2017-05-12 15:08:55.643  INFO 8680 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/drools/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-05-12 15:08:55.659  INFO 8680 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'brokerChannelExecutor'
+2017-05-12 15:08:56.237  INFO 8680 [main] --- o.d.c.k.b.impl.ClasspathKieProject       : Found kmodule: jar:file:/C:/Users/Carlos%20Bustani/Documents/GitHub/qzr/qzr-web/target/qzr-web-1.0.0-SNAPSHOT.jar!/META-INF/kmodule.xml
+2017-05-12 15:09:01.184  INFO 8680 [main] --- o.d.c.k.builder.impl.KieRepositoryImpl   : KieModule was added:ZipKieModule[ ReleaseId=com.sctrcd:qzr-web:1.0.0-SNAPSHOTfile=C:\Users\Carlos Bustani\Documents\GitHub\qzr\qzr-web\target\qzr-web-1.0.0-SNAPSHOT.jar]
+2017-05-12 15:09:01.340  INFO 8680 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 15:09:01.418  INFO 8680 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto java.lang.String com.sctrcd.qzr.web.controllers.HomeController.index()
+2017-05-12 15:09:01.434  INFO 8680 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/skip],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sctrcd.qzr.web.controllers.HrMaxQuizController.skip(java.lang.String)
+2017-05-12 15:09:01.450  INFO 8680 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.AnswerResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.answer(java.lang.String,com.sctrcd.qzr.web.resources.AnswerResource) throws com.sctrcd.qzr.web.resources.BadRequestException
+2017-05-12 15:09:01.450  INFO 8680 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.sctrcd.qzr.web.resources.QuizResource com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuiz()
+2017-05-12 15:09:01.465  INFO 8680 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/results/hrmax],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.sctrcd.qzr.facts.HrMax com.sctrcd.qzr.web.controllers.HrMaxQuizController.getHrMax() throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:09:01.481  INFO 8680 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.QuestionResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuestion(java.lang.String) throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:09:01.481  INFO 8680 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/knowns],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Collection<com.sctrcd.qzr.facts.Known<?>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getKnowns()
+2017-05-12 15:09:01.496  INFO 8680 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/next],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.QuestionResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getNextQuestion() throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:09:01.512  INFO 8680 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sctrcd.qzr.web.controllers.HrMaxQuizController.retractAnswer(java.lang.String)
+2017-05-12 15:09:01.512  INFO 8680 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.AnswerResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getAnswer(java.lang.String) throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:09:01.528  INFO 8680 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/answers],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<java.util.List<com.sctrcd.qzr.web.resources.AnswerResource>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getAnswers()
+2017-05-12 15:09:01.543  INFO 8680 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<java.util.List<com.sctrcd.qzr.web.resources.QuestionResource>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuestions()
+2017-05-12 15:09:01.543  INFO 8680 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-12 15:09:01.559  INFO 8680 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2017-05-12 15:09:01.606  INFO 8680 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 15:09:01.606  INFO 8680 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 15:09:02.559  INFO 8680 [main] --- o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-12 15:09:02.606  INFO 8680 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Registering beans for JMX exposure on startup
+2017-05-12 15:09:02.731  INFO 8680 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:09:02.731  INFO 8680 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-05-12 15:09:02.747  INFO 8680 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:09:02.747  INFO 8680 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke()
+2017-05-12 15:09:02.762  INFO 8680 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:09:02.762  INFO 8680 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:09:02.778  INFO 8680 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:09:02.778  INFO 8680 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:09:02.794  INFO 8680 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:09:02.794  INFO 8680 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-05-12 15:09:02.794  INFO 8680 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:09:02.809  INFO 8680 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:09:02.856  INFO 8680 [main] --- o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-05-12 15:09:02.872  INFO 8680 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+2017-05-12 15:09:02.919  INFO 8680 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+2017-05-12 15:09:02.934  INFO 8680 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+2017-05-12 15:09:02.934  INFO 8680 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+2017-05-12 15:09:02.950  INFO 8680 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+2017-05-12 15:09:02.965  INFO 8680 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+2017-05-12 15:09:02.965  INFO 8680 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+2017-05-12 15:09:02.981  INFO 8680 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+2017-05-12 15:09:02.997  INFO 8680 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'autoConfigurationAuditEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationAuditEndpoint]
+2017-05-12 15:09:03.012  INFO 8680 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'shutdownEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=shutdownEndpoint]
+2017-05-12 15:09:03.028  INFO 8680 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+2017-05-12 15:09:03.044  INFO 8680 [main] --- o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-05-12 15:09:03.153  INFO 8680 [main] --- s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 40080/http
+2017-05-12 15:09:03.153  INFO 8680 [main] --- com.sctrcd.qzr.Qzr                       : Started Qzr in 15.266 seconds (JVM running for 16.623)
+2017-05-12 15:09:03.153  INFO 8680 [main] --- com.sctrcd.qzr.Qzr                       : 
+
+    Active profiles:
+        scratch
+        drools
+
+    Application beans:
+        answerResourceAssembler
+        applicationContextIdFilter
+        auditEventRepository
+        auditListener
+        autoConfigurationAuditEndpoint
+        basicErrorController
+        beanNameHandlerMapping
+        beanNameViewResolver
+        beansEndpoint
+        brokerChannel
+        brokerChannelExecutor
+        brokerMessageConverter
+        brokerMessagingTemplate
+        clientInboundChannel
+        clientInboundChannelExecutor
+        clientOutboundChannel
+        clientOutboundChannelExecutor
+        configurationPropertiesReportEndpoint
+        counterService
+        defaultServletHandlerMapping
+        defaultTemplateResolver
+        defaultViewResolver
+        dispatcherServlet
+        dispatcherServletRegistration
+        dumpEndpoint
+        embeddedServletContainerCustomizerBeanPostProcessor
+        endpointHandlerMapping
+        endpointMBeanExporter
+        endpoints.health.CONFIGURATION_PROPERTIES
+        endpoints.jmx.CONFIGURATION_PROPERTIES
+        environmentEndpoint
+        environmentMvcEndpoint
+        error
+        errorAttributes
+        faviconHandlerMapping
+        faviconRequestHandler
+        gaugeService
+        handlerExceptionResolver
+        healthAggregator
+        healthEndpoint
+        healthMvcEndpoint
+        hiddenHttpMethodFilter
+        homeController
+        hrMaxQuizController
+        hrMaxQuizService
+        http.mappers.CONFIGURATION_PROPERTIES
+        httpRequestHandlerAdapter
+        infoEndpoint
+        jacksonJodaModule
+        kieContainer
+        layoutDialect
+        managementServerProperties
+        mappingJackson2HttpMessageConverter
+        mbeanExporter
+        mbeanServer
+        messageBrokerSockJsTaskScheduler
+        messageConverters
+        metricFilter
+        metricRepository
+        metricsChannel
+        metricsEndpoint
+        metricsExecutor
+        metricsMvcEndpoint
+        multipart.CONFIGURATION_PROPERTIES
+        multipartConfigElement
+        multipartResolver
+        mvcContentNegotiationManager
+        mvcConversionService
+        mvcEndpoints
+        mvcUriComponentsContributor
+        mvcValidator
+        objectMapper
+        objectNamingStrategy
+        org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration$AuditEventRepositoryConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$InfoPropertiesConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$RequestMappingEndpointConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ApplicationContextFilterConfiguration
+        org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration$MetricRepositoryConfiguration
+        org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration$MetricsChannelConfiguration
+        org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration
+        org.springframework.boot.autoconfigure.AutoConfigurationPackages
+        org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration
+        org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
+        org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperAutoConfiguration
+        org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JodaModuleAutoConfiguration
+        org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
+        org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$Empty
+        org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration
+        org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration
+        org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafDefaultConfiguration
+        org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafViewResolverConfiguration
+        org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebLayoutConfiguration
+        org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration
+        org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletConfiguration
+        org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration
+        org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat
+        org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration
+        org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration
+        org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration
+        org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration$ObjectMappers
+        org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration
+        org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration
+        org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
+        org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter
+        org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$FaviconConfiguration
+        org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration
+        org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor
+        org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.store
+        org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor
+        org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor
+        org.springframework.context.annotation.MBeanExportConfiguration
+        org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+        org.springframework.context.annotation.internalCommonAnnotationProcessor
+        org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+        org.springframework.context.annotation.internalRequiredAnnotationProcessor
+        org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration
+        org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration
+        primaryMetricWriter
+        propertySourcesPlaceholderConfigurer
+        questionResourceAssembler
+        qzr
+        requestContextListener
+        requestMappingEndpoint
+        requestMappingHandlerAdapter
+        requestMappingHandlerMapping
+        resourceHandlerMapping
+        scopedTarget.hrMaxQuizService
+        serializationConfig
+        serverProperties
+        shutdownEndpoint
+        simpAnnotationMethodMessageHandler
+        simpleBrokerMessageHandler
+        simpleControllerHandlerAdapter
+        spring.mvc.CONFIGURATION_PROPERTIES
+        spring.resources.CONFIGURATION_PROPERTIES
+        statusHealthIndicator
+        stompBrokerRelayMessageHandler
+        stompWebSocketHandlerMapping
+        subProtocolWebSocketHandler
+        templateEngine
+        thymeleafResourceResolver
+        thymeleafViewResolver
+        tomcatEmbeddedServletContainerFactory
+        traceEndpoint
+        traceRepository
+        userDestinationMessageHandler
+        userDestinationResolver
+        userSessionRegistry
+        viewControllerHandlerMapping
+        viewResolver
+        webRequestLoggingFilter
+        webSocketConfig
+        websocketContainerCustomizer
+
+2017-05-12 15:09:12.900  INFO 8680 [http-nio-40080-exec-1] --- o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-12 15:09:12.904  INFO 8680 [http-nio-40080-exec-1] --- o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-12 15:09:12.956  INFO 8680 [http-nio-40080-exec-1] --- o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 48 ms
+2017-05-12 15:09:13.693 DEBUG 8680 [http-nio-40080-exec-6] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:09:13.717  INFO 8680 [http-nio-40080-exec-6] --- c.sctrcd.qzr.services.HrMaxQuizService   : Initialising a new quiz session.
+2017-05-12 15:09:16.759 DEBUG 8680 [http-nio-40080-exec-6] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Ask dateOfBirth
+2017-05-12 15:09:16.806 DEBUG 8680 [http-nio-40080-exec-6] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }]
+2017-05-12 15:09:25.749 DEBUG 8680 [http-nio-40080-exec-1] --- c.s.q.w.controllers.HrMaxQuizController  : Answer to question [dateOfBirth]: 1994-01-01
+2017-05-12 15:09:25.856 DEBUG 8680 [http-nio-40080-exec-1] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Bind question to answer
+2017-05-12 15:09:25.919 DEBUG 8680 [http-nio-40080-exec-1] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Learn date of birth
+2017-05-12 15:09:25.934 DEBUG 8680 [http-nio-40080-exec-1] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Ask gender
+2017-05-12 15:09:25.934 DEBUG 8680 [http-nio-40080-exec-1] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Calculate age
+2017-05-12 15:09:25.950 DEBUG 8680 [http-nio-40080-exec-1] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Calculate best guess max HR
+2017-05-12 15:09:25.950 DEBUG 8680 [http-nio-40080-exec-1] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Learn HR max
+2017-05-12 15:09:25.986 DEBUG 8680 [http-nio-40080-exec-8] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:09:26.002 DEBUG 8680 [http-nio-40080-exec-8] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }, Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }]
+2017-05-12 15:09:26.065 DEBUG 8680 [http-nio-40080-exec-9] --- c.s.q.w.controllers.HrMaxQuizController  : Knowns: [Known: { key="hrMax", value="197" }, Known: { key="dateOfBirth", value="1994-01-01" }, Known: { key="age", value="23" }]
+2017-05-12 15:09:30.858 DEBUG 8680 [http-nio-40080-exec-4] --- c.s.q.w.controllers.HrMaxQuizController  : Answer to question [gender]: F
+2017-05-12 15:09:30.866 DEBUG 8680 [http-nio-40080-exec-4] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Bind question to answer
+2017-05-12 15:09:30.886 DEBUG 8680 [http-nio-40080-exec-4] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Learn gender
+2017-05-12 15:09:30.902 DEBUG 8680 [http-nio-40080-exec-4] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Is female
+2017-05-12 15:09:30.902 DEBUG 8680 [http-nio-40080-exec-4] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Calculate female-adjusted max HR
+2017-05-12 15:09:30.917 DEBUG 8680 [http-nio-40080-exec-4] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Learn HR max
+2017-05-12 15:09:30.934 DEBUG 8680 [http-nio-40080-exec-7] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:09:30.950 DEBUG 8680 [http-nio-40080-exec-7] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }, Question: { key="gender", question="There are adjusted max HR calculations for men and women. Please provide this information to see the result.", options=[[Option: { key=F, text=Female }, Option: { key=M, text=Male }]] }]
+2017-05-12 15:09:30.990 DEBUG 8680 [http-nio-40080-exec-3] --- c.s.q.w.controllers.HrMaxQuizController  : Knowns: [Known: { key="dateOfBirth", value="1994-01-01" }, Known: { key="gender", value="F" }, Known: { key="age", value="23" }, Known: { key="hrMax", value="188" }]
+2017-05-12 15:17:09.625  INFO 9724 [main] --- com.sctrcd.qzr.Qzr                       : Starting Qzr on CBustani with PID 9724 (C:\Users\Carlos Bustani\Documents\GitHub\qzr\qzr-web\target\qzr-web-1.0.0-SNAPSHOT.jar started by Carlos Bustani in C:\Users\Carlos Bustani\Documents\GitHub\qzr\qzr-web)
+2017-05-12 15:17:09.641 DEBUG 9724 [main] --- com.sctrcd.qzr.Qzr                       : Running with Spring Boot v1.1.9.RELEASE, Spring v4.0.8.RELEASE
+2017-05-12 15:17:09.703  INFO 9724 [main] --- ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b6644: startup date [Fri May 12 15:17:09 CDT 2017]; root of context hierarchy
+2017-05-12 15:17:11.333  INFO 9724 [main] --- o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2017-05-12 15:17:13.300  INFO 9724 [main] --- .t.TomcatEmbeddedServletContainerFactory : Server initialized with port: 40080
+2017-05-12 15:17:13.519  INFO 9724 [main] --- o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-12 15:17:13.535  INFO 9724 [main] --- org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/7.0.56
+2017-05-12 15:17:13.769  INFO 9724 [localhost-startStop-1] --- o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-12 15:17:13.769  INFO 9724 [localhost-startStop-1] --- o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4066 ms
+2017-05-12 15:17:14.160  INFO 9724 [localhost-startStop-1] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'metricsExecutor'
+2017-05-12 15:17:15.222  INFO 9724 [localhost-startStop-1] --- o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-12 15:17:15.222  INFO 9724 [localhost-startStop-1] --- o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2017-05-12 15:17:15.222  INFO 9724 [localhost-startStop-1] --- o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-12 15:17:15.222  INFO 9724 [localhost-startStop-1] --- o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-05-12 15:17:15.238  INFO 9724 [localhost-startStop-1] --- o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-05-12 15:17:15.519  INFO 9724 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientInboundChannelExecutor'
+2017-05-12 15:17:15.519  INFO 9724 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientOutboundChannelExecutor'
+2017-05-12 15:17:15.550  INFO 9724 [main] --- o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'messageBrokerSockJsTaskScheduler'
+2017-05-12 15:17:15.644  INFO 9724 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/drools/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-05-12 15:17:15.644  INFO 9724 [main] --- o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'brokerChannelExecutor'
+2017-05-12 15:17:16.191  INFO 9724 [main] --- o.d.c.k.b.impl.ClasspathKieProject       : Found kmodule: jar:file:/C:/Users/Carlos%20Bustani/Documents/GitHub/qzr/qzr-web/target/qzr-web-1.0.0-SNAPSHOT.jar!/META-INF/kmodule.xml
+2017-05-12 15:17:20.846  INFO 9724 [main] --- o.d.c.k.builder.impl.KieRepositoryImpl   : KieModule was added:ZipKieModule[ ReleaseId=com.sctrcd:qzr-web:1.0.0-SNAPSHOTfile=C:\Users\Carlos Bustani\Documents\GitHub\qzr\qzr-web\target\qzr-web-1.0.0-SNAPSHOT.jar]
+2017-05-12 15:17:20.971  INFO 9724 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 15:17:21.034  INFO 9724 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto java.lang.String com.sctrcd.qzr.web.controllers.HomeController.index()
+2017-05-12 15:17:21.049  INFO 9724 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/skip],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sctrcd.qzr.web.controllers.HrMaxQuizController.skip(java.lang.String)
+2017-05-12 15:17:21.049  INFO 9724 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/results/hrmax],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.sctrcd.qzr.facts.HrMax com.sctrcd.qzr.web.controllers.HrMaxQuizController.getHrMax() throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:17:21.065  INFO 9724 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.AnswerResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.answer(java.lang.String,com.sctrcd.qzr.web.resources.AnswerResource) throws com.sctrcd.qzr.web.resources.BadRequestException
+2017-05-12 15:17:21.081  INFO 9724 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.sctrcd.qzr.web.resources.QuizResource com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuiz()
+2017-05-12 15:17:21.081  INFO 9724 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.AnswerResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getAnswer(java.lang.String) throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:17:21.096  INFO 9724 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/answers],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<java.util.List<com.sctrcd.qzr.web.resources.AnswerResource>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getAnswers()
+2017-05-12 15:17:21.096  INFO 9724 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/knowns],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Collection<com.sctrcd.qzr.facts.Known<?>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getKnowns()
+2017-05-12 15:17:21.112  INFO 9724 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}/answer],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.sctrcd.qzr.web.controllers.HrMaxQuizController.retractAnswer(java.lang.String)
+2017-05-12 15:17:21.112  INFO 9724 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/{key}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.QuestionResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuestion(java.lang.String) throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:17:21.128  INFO 9724 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions/next],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<com.sctrcd.qzr.web.resources.QuestionResource> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getNextQuestion() throws com.sctrcd.qzr.web.resources.NotFoundException
+2017-05-12 15:17:21.128  INFO 9724 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/quizzes/health/questions],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.HttpEntity<java.util.List<com.sctrcd.qzr.web.resources.QuestionResource>> com.sctrcd.qzr.web.controllers.HrMaxQuizController.getQuestions()
+2017-05-12 15:17:21.143  INFO 9724 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-12 15:17:21.159  INFO 9724 [main] --- s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2017-05-12 15:17:21.190  INFO 9724 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 15:17:21.190  INFO 9724 [main] --- o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-12 15:17:21.956  INFO 9724 [main] --- o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-12 15:17:22.018  INFO 9724 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Registering beans for JMX exposure on startup
+2017-05-12 15:17:22.112  INFO 9724 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:17:22.112  INFO 9724 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:17:22.112  INFO 9724 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:17:22.128  INFO 9724 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:17:22.128  INFO 9724 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-05-12 15:17:22.143  INFO 9724 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:17:22.143  INFO 9724 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke()
+2017-05-12 15:17:22.159  INFO 9724 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:17:22.159  INFO 9724 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:17:22.159  INFO 9724 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-05-12 15:17:22.175  INFO 9724 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:17:22.175  INFO 9724 [main] --- o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-12 15:17:22.221  INFO 9724 [main] --- o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-05-12 15:17:22.221  INFO 9724 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+2017-05-12 15:17:22.284  INFO 9724 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+2017-05-12 15:17:22.284  INFO 9724 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+2017-05-12 15:17:22.300  INFO 9724 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+2017-05-12 15:17:22.315  INFO 9724 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+2017-05-12 15:17:22.315  INFO 9724 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+2017-05-12 15:17:22.331  INFO 9724 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+2017-05-12 15:17:22.331  INFO 9724 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+2017-05-12 15:17:22.346  INFO 9724 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'autoConfigurationAuditEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationAuditEndpoint]
+2017-05-12 15:17:22.346  INFO 9724 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'shutdownEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=shutdownEndpoint]
+2017-05-12 15:17:22.378  INFO 9724 [main] --- o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+2017-05-12 15:17:22.378  INFO 9724 [main] --- o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-05-12 15:17:22.503  INFO 9724 [main] --- s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 40080/http
+2017-05-12 15:17:22.503  INFO 9724 [main] --- com.sctrcd.qzr.Qzr                       : Started Qzr in 13.434 seconds (JVM running for 14.79)
+2017-05-12 15:17:22.503  INFO 9724 [main] --- com.sctrcd.qzr.Qzr                       : 
+
+    Active profiles:
+        scratch
+        drools
+
+    Application beans:
+        answerResourceAssembler
+        applicationContextIdFilter
+        auditEventRepository
+        auditListener
+        autoConfigurationAuditEndpoint
+        basicErrorController
+        beanNameHandlerMapping
+        beanNameViewResolver
+        beansEndpoint
+        brokerChannel
+        brokerChannelExecutor
+        brokerMessageConverter
+        brokerMessagingTemplate
+        clientInboundChannel
+        clientInboundChannelExecutor
+        clientOutboundChannel
+        clientOutboundChannelExecutor
+        configurationPropertiesReportEndpoint
+        counterService
+        defaultServletHandlerMapping
+        defaultTemplateResolver
+        defaultViewResolver
+        dispatcherServlet
+        dispatcherServletRegistration
+        dumpEndpoint
+        embeddedServletContainerCustomizerBeanPostProcessor
+        endpointHandlerMapping
+        endpointMBeanExporter
+        endpoints.health.CONFIGURATION_PROPERTIES
+        endpoints.jmx.CONFIGURATION_PROPERTIES
+        environmentEndpoint
+        environmentMvcEndpoint
+        error
+        errorAttributes
+        faviconHandlerMapping
+        faviconRequestHandler
+        gaugeService
+        handlerExceptionResolver
+        healthAggregator
+        healthEndpoint
+        healthMvcEndpoint
+        hiddenHttpMethodFilter
+        homeController
+        hrMaxQuizController
+        hrMaxQuizService
+        http.mappers.CONFIGURATION_PROPERTIES
+        httpRequestHandlerAdapter
+        infoEndpoint
+        jacksonJodaModule
+        kieContainer
+        layoutDialect
+        managementServerProperties
+        mappingJackson2HttpMessageConverter
+        mbeanExporter
+        mbeanServer
+        messageBrokerSockJsTaskScheduler
+        messageConverters
+        metricFilter
+        metricRepository
+        metricsChannel
+        metricsEndpoint
+        metricsExecutor
+        metricsMvcEndpoint
+        multipart.CONFIGURATION_PROPERTIES
+        multipartConfigElement
+        multipartResolver
+        mvcContentNegotiationManager
+        mvcConversionService
+        mvcEndpoints
+        mvcUriComponentsContributor
+        mvcValidator
+        objectMapper
+        objectNamingStrategy
+        org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration$AuditEventRepositoryConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$InfoPropertiesConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$RequestMappingEndpointConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ApplicationContextFilterConfiguration
+        org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration$MetricRepositoryConfiguration
+        org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration$MetricsChannelConfiguration
+        org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration
+        org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration
+        org.springframework.boot.autoconfigure.AutoConfigurationPackages
+        org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration
+        org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
+        org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperAutoConfiguration
+        org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JodaModuleAutoConfiguration
+        org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
+        org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$Empty
+        org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration
+        org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration
+        org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafDefaultConfiguration
+        org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafViewResolverConfiguration
+        org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebLayoutConfiguration
+        org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration
+        org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletConfiguration
+        org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration
+        org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat
+        org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration
+        org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration
+        org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration
+        org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration$ObjectMappers
+        org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration
+        org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration
+        org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
+        org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter
+        org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$FaviconConfiguration
+        org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration
+        org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor
+        org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.store
+        org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor
+        org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor
+        org.springframework.context.annotation.MBeanExportConfiguration
+        org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+        org.springframework.context.annotation.internalCommonAnnotationProcessor
+        org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+        org.springframework.context.annotation.internalRequiredAnnotationProcessor
+        org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration
+        org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration
+        primaryMetricWriter
+        propertySourcesPlaceholderConfigurer
+        questionResourceAssembler
+        qzr
+        requestContextListener
+        requestMappingEndpoint
+        requestMappingHandlerAdapter
+        requestMappingHandlerMapping
+        resourceHandlerMapping
+        scopedTarget.hrMaxQuizService
+        serializationConfig
+        serverProperties
+        shutdownEndpoint
+        simpAnnotationMethodMessageHandler
+        simpleBrokerMessageHandler
+        simpleControllerHandlerAdapter
+        spring.mvc.CONFIGURATION_PROPERTIES
+        spring.resources.CONFIGURATION_PROPERTIES
+        statusHealthIndicator
+        stompBrokerRelayMessageHandler
+        stompWebSocketHandlerMapping
+        subProtocolWebSocketHandler
+        templateEngine
+        thymeleafResourceResolver
+        thymeleafViewResolver
+        tomcatEmbeddedServletContainerFactory
+        traceEndpoint
+        traceRepository
+        userDestinationMessageHandler
+        userDestinationResolver
+        userSessionRegistry
+        viewControllerHandlerMapping
+        viewResolver
+        webRequestLoggingFilter
+        webSocketConfig
+        websocketContainerCustomizer
+
+2017-05-12 15:20:23.563  INFO 9724 [http-nio-40080-exec-1] --- o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-12 15:20:23.567  INFO 9724 [http-nio-40080-exec-1] --- o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-12 15:20:23.619  INFO 9724 [http-nio-40080-exec-1] --- o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 48 ms
+2017-05-12 15:20:24.346 DEBUG 9724 [http-nio-40080-exec-8] --- c.s.q.w.controllers.HrMaxQuizController  : Request received for all questions.
+2017-05-12 15:20:24.366  INFO 9724 [http-nio-40080-exec-8] --- c.sctrcd.qzr.services.HrMaxQuizService   : Initialising a new quiz session.
+2017-05-12 15:20:26.755 DEBUG 9724 [http-nio-40080-exec-8] --- c.s.d.m.LoggingAgendaEventListener       : Rule fired: Ask dateOfBirth
+2017-05-12 15:20:26.802 DEBUG 9724 [http-nio-40080-exec-8] --- c.s.q.w.controllers.HrMaxQuizController  : Questions: [Question: { key="dateOfBirth", question="What is your date of birth? (yyyy-MM-dd)", options=[[]] }]
